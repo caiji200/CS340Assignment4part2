@@ -290,7 +290,7 @@ void aStarSearch(int grid[][COL], Pair src, Pair dest)
                 hNew = calculateHValue(i - 1, j, dest);
                 fNew = gNew + hNew;
 
-                // If it isn¡¯t on the open list, add it to 
+                // If it isnÂ¡Â¯t on the open list, add it to 
                 // the open list. Make the current square 
                 // the parent of this square. Record the 
                 // f, g, and h costs of the square cell 
@@ -341,7 +341,7 @@ void aStarSearch(int grid[][COL], Pair src, Pair dest)
                 hNew = calculateHValue(i + 1, j, dest);
                 fNew = gNew + hNew;
 
-                // If it isn¡¯t on the open list, add it to 
+                // If it isnÂ¡Â¯t on the open list, add it to 
                 // the open list. Make the current square 
                 // the parent of this square. Record the 
                 // f, g, and h costs of the square cell 
@@ -391,7 +391,7 @@ void aStarSearch(int grid[][COL], Pair src, Pair dest)
                 hNew = calculateHValue(i, j + 1, dest);
                 fNew = gNew + hNew;
 
-                // If it isn¡¯t on the open list, add it to 
+                // If it isnÂ¡Â¯t on the open list, add it to 
                 // the open list. Make the current square 
                 // the parent of this square. Record the 
                 // f, g, and h costs of the square cell 
@@ -443,7 +443,7 @@ void aStarSearch(int grid[][COL], Pair src, Pair dest)
                 hNew = calculateHValue(i, j - 1, dest);
                 fNew = gNew + hNew;
 
-                // If it isn¡¯t on the open list, add it to 
+                // If it isnÂ¡Â¯t on the open list, add it to 
                 // the open list. Make the current square 
                 // the parent of this square. Record the 
                 // f, g, and h costs of the square cell 
@@ -495,7 +495,7 @@ void aStarSearch(int grid[][COL], Pair src, Pair dest)
                 hNew = calculateHValue(i - 1, j + 1, dest);
                 fNew = gNew + hNew;
 
-                // If it isn¡¯t on the open list, add it to 
+                // If it isnÂ¡Â¯t on the open list, add it to 
                 // the open list. Make the current square 
                 // the parent of this square. Record the 
                 // f, g, and h costs of the square cell 
@@ -547,7 +547,7 @@ void aStarSearch(int grid[][COL], Pair src, Pair dest)
                 hNew = calculateHValue(i - 1, j - 1, dest);
                 fNew = gNew + hNew;
 
-                // If it isn¡¯t on the open list, add it to 
+                // If it isnÂ¡Â¯t on the open list, add it to 
                 // the open list. Make the current square 
                 // the parent of this square. Record the 
                 // f, g, and h costs of the square cell 
@@ -597,7 +597,7 @@ void aStarSearch(int grid[][COL], Pair src, Pair dest)
                 hNew = calculateHValue(i + 1, j + 1, dest);
                 fNew = gNew + hNew;
 
-                // If it isn¡¯t on the open list, add it to 
+                // If it isnÂ¡Â¯t on the open list, add it to 
                 // the open list. Make the current square 
                 // the parent of this square. Record the 
                 // f, g, and h costs of the square cell 
@@ -649,7 +649,7 @@ void aStarSearch(int grid[][COL], Pair src, Pair dest)
                 hNew = calculateHValue(i + 1, j - 1, dest);
                 fNew = gNew + hNew;
 
-                // If it isn¡¯t on the open list, add it to 
+                // If it isnÂ¡Â¯t on the open list, add it to 
                 // the open list. Make the current square 
                 // the parent of this square. Record the 
                 // f, g, and h costs of the square cell 
@@ -703,7 +703,7 @@ int main()
     while (!inFile.eof()) {
         inFile >> grid[ROW][COL];
     }   
-    inFile.close();
+    
 
     // Source is the left-most bottom-most corner 
     Pair src = make_pair(8, 0);
@@ -712,6 +712,6 @@ int main()
     Pair dest = make_pair(0, 0);
 
     aStarSearch(grid, src, dest);
-
+    inFile.close();
     return(0);
 }
